@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-6">
+                <form action="./form.php" method="post">
+                    <div>
+                        <label for="">Name</label>
+                        <input type="text" placeholder="Enter Name" class="form-control" name="username">
+                    </div>
+                    
+                    <div>
+                        <label for="">Email</label>
+                        <input type="email" placeholder="Enter Email" name="useremail" class="form-control">
+                    </div>
+                    
+                    <div>
+                        <label for="">Password</label>
+                        <input type="password" placeholder="Enter Password" name="userpass" class="form-control">
+                    </div>
+                    
+                   
+                    
+                    
+                    <div>
+                        <label for="">Gender : </label>
+                        <input type="radio" name="gender" value="Male"><span>Male</span>
+                        <input type="radio" name="gender" value="Female"><span>Female</span>
+                    </div>
+                    
+                    <div>
+                        <label for="">Courses : </label>
+                    
+                        <input type="checkbox" name="check[]" value="PHP"><span>PHP</span>
+                  
+                        <input type="checkbox" name="check[]" value="JS"><span>JS</span>
+                   
+                        <input type="checkbox" name="check[]" value="Java"><span>Java</span>
+                  
+                        <input type="checkbox" name="check[]" value="MySQL"><span>MySQL</span>
+                    </div>
+                    
+                    <button type="submit">Submit</button>
+                    
+                        </form>
+                    
+            </div>
+        </div>
+    </div>
+   
+
+</body>
+</html>
