@@ -73,3 +73,11 @@
 @empty($user)
    
 @endempty
+
+
+
+1st migration file create and migrate 
+2nd model create
+3rd seeder create 
+4th seeder file call in databaseSeeder
+5th run a command to insert a data to database  
