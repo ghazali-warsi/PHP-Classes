@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\EmployeeController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\UserController;
 
@@ -83,63 +84,66 @@ route::fallback(function()
 // route::get('food/servicepage' , function(){
 //     return view('services');
 // })->name('service');
-Route::get('/home' , function()
-{
-    return view('webpage.home');
-});
 
-Route::get('/about' , function()
-{
-    return view('webpage.about');
-});
-Route::get('/contact' , function()
-{
-    return view('webpage.contact');
-});
+// Route::get('/home' , function()
+// {
+//     return view('webpage.home');
+// });
 
-route::get('/master' , function()
-{
-    return view('layout.master');
-});
+// Route::get('/about' , function()
+// {
+//     return view('webpage.about');
+// });
+// Route::get('/contact' , function()
+// {
+//     return view('webpage.contact');
+// });
 
-route::get('/master/home' , function()
-{
-    return view('layout.home');
-});
+// route::get('/master' , function()
+// {
+//     return view('layout.master');
+// });
 
-route::get('/master/about' , function()
-{
-    return view('layout.about');
-});
+// route::get('/master/home' , function()
+// {
+//     return view('layout.home');
+// });
 
-route::get('/master/contact' , function()
-{
-    return view('layout.contact');
-});
+// route::get('/master/about' , function()
+// {
+//     return view('layout.about');
+// });
 
-route::get('/theme/main' , function()
-{
-    return view('theme.main');
-});
+// route::get('/master/contact' , function()
+// {
+//     return view('layout.contact');
+// });
 
-route::get('/theme/home' , function()
-{
-    return view('theme.home');
-});
-route::get('/theme/about' , function()
-{
-    return view('theme.about');
-});
-route::get('/theme/contact' , function()
-{
-    return view('theme.contact');
-});
+// route::get('/theme/main' , function()
+// {
+//     return view('theme.main');
+// });
 
-route::get('/theme/feedback' , function()
-{
-    return view('theme.feedback');
-});
+// route::get('/theme/home' , function()
+// {
+//     return view('theme.home');
+// });
+// route::get('/theme/about' , function()
+// {
+//     return view('theme.about');
+// });
+// route::get('/theme/contact' , function()
+// {
+//     return view('theme.contact');
+// });
+
+// route::get('/theme/feedback' , function()
+// {
+//     return view('theme.feedback');
+// });
 
 
 route::get('/user' , [UserController::class , 'showUser'])->name('user');
 route::get('/userdetail' , [UserController::class , 'UserDetail'])->name('detail');
+route::view('/form' , 'Employee.insert');
+Route::post('/EmpForm' , [EmployeeController::class , 'EmpData'])->name('Form');
